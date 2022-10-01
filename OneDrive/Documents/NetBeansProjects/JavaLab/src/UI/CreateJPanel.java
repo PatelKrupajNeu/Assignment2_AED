@@ -20,9 +20,10 @@ public class CreateJPanel extends javax.swing.JPanel {
      */
     EmployeeHistory history;
     Employee employee;
+    
     public CreateJPanel(EmployeeHistory history) {
         initComponents();
-        this.employee = employee;
+        
         this.history = history;
     }
 
@@ -71,7 +72,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        setPreferredSize(new java.awt.Dimension(600, 300));
+        setPreferredSize(new java.awt.Dimension(600, 600));
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -265,7 +266,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPhoto))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSave))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -331,13 +332,12 @@ public class CreateJPanel extends javax.swing.JPanel {
         String email_id = txtEmail.getText();
         String photo = txtPhoto.getText();
         String EmployeeID = txtEmployeeID.getText();
-        Employee emp = history.addNewEmployee();
         
+        Employee emp = history.addNewEmployee();
         emp.setName(name);
         emp.setAge(age);
         emp.setGender(gender);
         emp.setStartDate(startdate);
-        
         emp.setLevel(level);
         emp.setTeam_info(team_info);
         emp.setPositiontitle(position_title);

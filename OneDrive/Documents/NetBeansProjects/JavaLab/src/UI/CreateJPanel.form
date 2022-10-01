@@ -18,7 +18,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[600, 300]"/>
+      <Dimension value="[600, 600]"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -147,7 +147,7 @@
                   <Component id="txtPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="8" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
