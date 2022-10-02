@@ -4,6 +4,8 @@
  */
 package UI;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
@@ -62,6 +64,8 @@ public class ViewJPanel extends javax.swing.JPanel {
         CellPhone = new javax.swing.JTextField();
         lblPosTitle = new javax.swing.JLabel();
         Email = new javax.swing.JTextField();
+        Modify = new javax.swing.JButton();
+        imagelbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(600, 500));
@@ -193,6 +197,15 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        Modify.setText("Modify");
+        Modify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModifyActionPerformed(evt);
+            }
+        });
+
+        imagelbl.setText("image");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -230,13 +243,19 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(83, 83, 83)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Photo, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CellPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(CellPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(Photo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(imagelbl, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnView)
-                    .addComponent(btnDelete))
+                    .addComponent(btnDelete)
+                    .addComponent(Modify))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,7 +265,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,7 +279,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnDelete)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnView))
+                        .addComponent(btnView)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Modify))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,10 +326,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                                     .addComponent(StartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbtStartDate))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Level, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbllvl))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Level, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbllvl))
+                        .addContainerGap())
+                    .addComponent(imagelbl, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -330,6 +354,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         DefaultTableModel model =  (DefaultTableModel)tblEmphis.getModel();
         Employee selectedEmp = (Employee)model.getValueAt(selectedRowIndex, 0);
         Name.setText(selectedEmp.getName());
+        EmployeeID.setText(selectedEmp.getEmployee_ID());
         Age.setText(selectedEmp.getAge());
         Gender.setText(selectedEmp.getGender());
         StartDate.setText(selectedEmp.getStartDate());
@@ -338,11 +363,16 @@ public class ViewJPanel extends javax.swing.JPanel {
         PositionTitle.setText(selectedEmp.getPositiontitle());
         CellPhone.setText(selectedEmp.getContact_cell_phone_number());
         Email.setText(selectedEmp.getEmail_address());
-        EmployeeID.setText(selectedEmp.getEmployee_ID());
-        Photo.setText(selectedEmp.getPhoto());
+        lblPhoto.setIcon(resize_image(selectedEmp.getPhoto_path()));
         
     }//GEN-LAST:event_btnViewActionPerformed
-
+    public ImageIcon resize_image(String image_path){
+        ImageIcon image_icon = new ImageIcon(image_path);
+        Image img = image_icon.getImage();
+        Image new_image = img.getScaledInstance(300,144,Image.SCALE_SMOOTH);
+        ImageIcon new_image_icon = new ImageIcon(new_image);
+        return new_image_icon;
+    }
     private void AgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AgeActionPerformed
@@ -393,6 +423,64 @@ public class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmailActionPerformed
 
+    private void ModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifyActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model =  (DefaultTableModel)tblEmphis.getModel();
+        Employee selectedEmp = (Employee)model.getValueAt(tblEmphis.getSelectedRow(), 0);
+        
+        if(tblEmphis.getSelectedRow()<0)
+        {
+            JOptionPane.showMessageDialog(this, "employee info selected");
+            return;
+        }
+        if(tblEmphis.getSelectedRowCount()==1)
+        {
+        
+        String name = Name.getText();    
+        String age = Age.getText();
+        String gender = Gender.getText();
+        String startDate = StartDate.getText();
+        String level = Level.getText();
+        String teaminfo = TeamInfo.getText();
+        String positionTitle = PositionTitle.getText();
+        String cellPhone = CellPhone.getText();
+        String email = Email.getText();
+        String employeeID = EmployeeID.getText();
+        String photo = Photo.getText();
+        
+        selectedEmp.setName(name);
+        selectedEmp.setEmployee_ID(employeeID);
+        selectedEmp.setAge(age);
+        selectedEmp.setGender(gender);
+        selectedEmp.setStartDate(startDate);
+        selectedEmp.setLevel(level);
+        selectedEmp.setTeam_info(teaminfo);
+        selectedEmp.setPositiontitle(positionTitle);        
+        selectedEmp.setContact_cell_phone_number(cellPhone);        
+        selectedEmp.setEmail_address(email);
+        selectedEmp.setPhoto_path(photo);
+        
+        model.setValueAt(name,tblEmphis.getSelectedRow(),0);
+         model.setValueAt(employeeID,tblEmphis.getSelectedRow(),1);
+        model.setValueAt(age,tblEmphis.getSelectedRow(),2);
+        model.setValueAt(gender,tblEmphis.getSelectedRow(),3);
+        model.setValueAt(startDate,tblEmphis.getSelectedRow(),4);
+        model.setValueAt(level,tblEmphis.getSelectedRow(),5);
+        model.setValueAt(teaminfo,tblEmphis.getSelectedRow(),6);
+        model.setValueAt(positionTitle,tblEmphis.getSelectedRow(),7);
+        model.setValueAt(cellPhone,tblEmphis.getSelectedRow(),8);
+        model.setValueAt(email,tblEmphis.getSelectedRow(),9);  
+        model.setValueAt(photo,tblEmphis.getSelectedRow(),10);
+        
+        
+        JOptionPane.showMessageDialog(this, "employee info updated");
+                    
+                 
+            
+        }
+        
+    }//GEN-LAST:event_ModifyActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Age;
@@ -401,6 +489,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField EmployeeID;
     private javax.swing.JTextField Gender;
     private javax.swing.JTextField Level;
+    private javax.swing.JButton Modify;
     private javax.swing.JTextField Name;
     private javax.swing.JTextField Photo;
     private javax.swing.JTextField PositionTitle;
@@ -408,6 +497,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField TeamInfo;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnView;
+    private javax.swing.JLabel imagelbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblEmployeeID;
@@ -432,8 +522,7 @@ for (Employee vs : history.getHistory()){
     Object[] row = new Object[11];
     row[0] = vs;
     row[1] = vs.getEmployee_ID();
-    row[2] = vs.getAge();
-   
+    row[2] = vs.getAge(); 
     row[3]= vs.getGender();
     row[4]=vs.getStartDate();
     row[5]=vs.getLevel();
@@ -441,7 +530,7 @@ for (Employee vs : history.getHistory()){
     row[7]=vs.getPositiontitle();
     row[8]=vs.getContact_cell_phone_number();
     row[9]=vs.getEmail_address();
-    row[10]=vs.getPhoto();
+    row[10]=vs.getPhoto_path();
     model.addRow(row);
             
 

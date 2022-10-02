@@ -61,29 +61,38 @@
                               <Component id="lblPhoto" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtPositionTitle" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtTeamInfo" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtStartDate" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtEmployeeID" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtAge" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtGender" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtLvl" min="-2" pref="222" max="-2" attributes="0"/>
-                          <Component id="txtName" min="-2" pref="222" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtPositionTitle" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtTeamInfo" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtStartDate" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtEmployeeID" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtAge" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtGender" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtLvl" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="txtName" min="-2" pref="222" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <Component id="btnimage" min="-2" pref="222" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtImgPath" min="-2" pref="0" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtPhoto" min="-2" pref="222" max="-2" attributes="0"/>
                           <Component id="txtEmail" min="-2" pref="222" max="-2" attributes="0"/>
                           <Component id="txtCellPhone" min="-2" pref="222" max="-2" attributes="0"/>
                           <Component id="btnSave" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="15" max="32767" attributes="0"/>
+              <EmptySpace pref="211" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -143,11 +152,14 @@
                   <Component id="lblemail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblPhoto" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnimage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtImgPath" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="228" max="32767" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -258,11 +270,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtPhoto">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPhotoActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtLvl">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLvlActionPerformed"/>
@@ -280,6 +287,19 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnimage">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="choose photo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnimageActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtImgPath">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

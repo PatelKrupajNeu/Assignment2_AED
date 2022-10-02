@@ -20,7 +20,7 @@ public class Employee {
     private String Contact_info;
     private String Contact_cell_phone_number;
     private String email_address;
-    private String photo;
+    private String photo_path;
     private String Positiontitle;
 
    
@@ -111,12 +111,12 @@ public class Employee {
         this.email_address = email_address;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getPhoto_path() {
+        return photo_path;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setPhoto_path(String photo) {
+        this.photo_path = photo;
     }
 
     @Override
