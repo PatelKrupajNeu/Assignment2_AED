@@ -51,6 +51,7 @@ public class SearchJPanel extends javax.swing.JPanel {
 
         lblSearch.setText("Search Employee Data");
 
+        txtSearch.setForeground(new java.awt.Color(51, 51, 51));
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchActionPerformed(evt);
