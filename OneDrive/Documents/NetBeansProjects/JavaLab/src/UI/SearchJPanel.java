@@ -25,9 +25,7 @@ public class SearchJPanel extends javax.swing.JPanel {
     public SearchJPanel(EmployeeHistory history) {
         initComponents();
         this.history = history;
-        populateTable();
-       
-        
+        populateTable();   
     }
 
     /**
@@ -45,15 +43,13 @@ public class SearchJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmphis = new javax.swing.JTable();
 
-        setForeground(new java.awt.Color(204, 204, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(227, 227, 227));
+        setForeground(new java.awt.Color(255, 255, 255));
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTitle.setText("Search Employee");
-        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 6, 208, -1));
 
         lblSearch.setText("Search Employee Data");
-        add(lblSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 41, 124, -1));
 
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +61,6 @@ public class SearchJPanel extends javax.swing.JPanel {
                 txtSearchKeyPressed(evt);
             }
         });
-        add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 38, 219, -1));
 
         tblEmphis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -88,7 +83,34 @@ public class SearchJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblEmphis);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 78, 1034, 229));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addComponent(lblSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(318, 318, 318)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(lblTitle)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSearch))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
@@ -99,6 +121,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         DefaultTableModel model = (DefaultTableModel) tblEmphis.getModel();
+        @SuppressWarnings("Convert2Diamond")
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(model);
         tblEmphis.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(txtSearch.getText().trim()));
@@ -114,11 +137,11 @@ public class SearchJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblEmphis;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
-private void populateTable(){
-//throw new UnsupportedOperationException("Not supported yet.");
-DefaultTableModel model =  (DefaultTableModel)tblEmphis.getModel();
-model.setRowCount(0);
-for (Employee vs : history.getHistory()){
+    private void populateTable(){
+    //throw new UnsupportedOperationException("Not supported yet.");
+    DefaultTableModel model =  (DefaultTableModel)tblEmphis.getModel();
+    model.setRowCount(0);
+    for (Employee vs : history.getHistory()){
     
     Object[] row = new Object[11];
     row[0] = vs;
@@ -133,9 +156,6 @@ for (Employee vs : history.getHistory()){
     row[9]=vs.getEmail_address();
     row[10]=vs.getPhoto_path();
     model.addRow(row);
-            
-
-
-}
-}
-}
+    }
+    }
+    }

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class EmployeeHistory {
     
 private ArrayList<Employee> history;
+@SuppressWarnings("Convert2Diamond")
 public EmployeeHistory(){
     this.history = new ArrayList<Employee>();
     
