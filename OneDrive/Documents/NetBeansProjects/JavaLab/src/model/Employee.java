@@ -23,7 +23,6 @@ public class Employee {
     private String photo_path;
     private String Positiontitle;
 
-   
     public String getName() {
         return name;
     }
@@ -55,13 +54,15 @@ public class Employee {
     public void setGender(String Gender) {
         this.Gender = Gender;
     }
-     public String getStartDate() {
+
+    public String getStartDate() {
         return StartDate;
     }
 
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
+
     public String getLevel() {
         return level;
     }
@@ -77,15 +78,6 @@ public class Employee {
     public void setTeam_info(String Team_info) {
         this.Team_info = Team_info;
     }
-
-    public String getPositiontitle() {
-        return Positiontitle;
-    }
-
-    public void setPositiontitle(String Positiontitle) {
-        this.Positiontitle = Positiontitle;
-    }
-
 
     public String getContact_info() {
         return Contact_info;
@@ -115,10 +107,19 @@ public class Employee {
         return photo_path;
     }
 
-    public void setPhoto_path(String photo) {
-        this.photo_path = photo;
+    public void setPhoto_path(String photo_path) {
+        this.photo_path = photo_path;
     }
 
+    public String getPositiontitle() {
+        return Positiontitle;
+    }
+
+    public void setPositiontitle(String Positiontitle) {
+        this.Positiontitle = Positiontitle;
+    }
+    
+      
     @Override
     public String toString(){
         return name;

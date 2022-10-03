@@ -5,9 +5,9 @@
 package UI;
 
 import java.io.File;
+import java.util.regex.Pattern;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import model.Employee;
 import model.EmployeeHistory;
@@ -44,7 +44,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblTitle = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblEmployeeID = new javax.swing.JLabel();
-        lbtAge = new javax.swing.JLabel();
         lblGender = new javax.swing.JLabel();
         lblTeamInfo = new javax.swing.JLabel();
         lbtStartDate = new javax.swing.JLabel();
@@ -53,10 +52,9 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblphone = new javax.swing.JLabel();
         lblemail = new javax.swing.JLabel();
         lblPhoto = new javax.swing.JLabel();
-        txtEmployeeID = new javax.swing.JTextField();
         txtStartDate = new javax.swing.JTextField();
         txtPositionTitle = new javax.swing.JTextField();
-        txtAge = new javax.swing.JTextField();
+        txtEmployeeID = new javax.swing.JTextField();
         txtTeamInfo = new javax.swing.JTextField();
         txtGender = new javax.swing.JTextField();
         txtCellPhone = new javax.swing.JTextField();
@@ -66,6 +64,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnimage = new javax.swing.JButton();
         txtImgPath = new javax.swing.JTextField();
+        ValidAge = new javax.swing.JLabel();
+        lblphone1 = new javax.swing.JLabel();
+        lbtAge = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
 
         lbtTitle6.setText("Level");
 
@@ -76,93 +78,136 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        setForeground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(600, 600));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Create Product");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 18, 379, -1));
 
         lblName.setText("Name");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 47, -1, -1));
 
-        lblEmployeeID.setText("Employee ID");
-
-        lbtAge.setText("Age");
+        lblEmployeeID.setText("Employee_ID");
+        add(lblEmployeeID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 90, -1));
 
         lblGender.setText("Gender");
+        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 131, -1, -1));
 
         lblTeamInfo.setText("Team Info");
+        add(lblTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 215, -1, -1));
 
-        lbtStartDate.setText("Start Date");
+        lbtStartDate.setText("Start Date (MM/DD/YYYY)");
+        add(lbtStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 159, -1, -1));
 
         lbllevel.setText("Level");
+        add(lbllevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 187, -1, -1));
 
         lblPosTitle.setText("Positon Title");
+        add(lblPosTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 240, -1, -1));
 
         lblphone.setText("Cell Phone");
+        add(lblphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 299, -1, -1));
 
         lblemail.setText("Email");
+        add(lblemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 324, -1, -1));
 
         lblPhoto.setText("Photo");
-
-        txtEmployeeID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmployeeIDActionPerformed(evt);
-            }
-        });
+        add(lblPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 355, -1, -1));
 
         txtStartDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtStartDateActionPerformed(evt);
             }
         });
+        txtStartDate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtStartDateKeyPressed(evt);
+            }
+        });
+        add(txtStartDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 156, 222, -1));
 
         txtPositionTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPositionTitleActionPerformed(evt);
             }
         });
+        add(txtPositionTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 240, 222, -1));
 
-        txtAge.addActionListener(new java.awt.event.ActionListener() {
+        txtEmployeeID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAgeActionPerformed(evt);
+                txtEmployeeIDActionPerformed(evt);
             }
         });
+        txtEmployeeID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtEmployeeIDKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEmployeeIDKeyReleased(evt);
+            }
+        });
+        add(txtEmployeeID, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 222, -1));
 
         txtTeamInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTeamInfoActionPerformed(evt);
             }
         });
+        add(txtTeamInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 212, 222, -1));
 
         txtGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtGenderActionPerformed(evt);
             }
         });
+        txtGender.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtGenderKeyPressed(evt);
+            }
+        });
+        add(txtGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 128, 222, -1));
 
         txtCellPhone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCellPhoneActionPerformed(evt);
             }
         });
+        txtCellPhone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCellPhoneKeyPressed(evt);
+            }
+        });
+        add(txtCellPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 296, 222, -1));
 
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
             }
         });
+        txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtEmailKeyPressed(evt);
+            }
+        });
+        add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 324, 222, -1));
 
         txtLvl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLvlActionPerformed(evt);
             }
         });
+        add(txtLvl, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 184, 222, -1));
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 44, 222, -1));
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -170,6 +215,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 387, -1, -1));
 
         btnimage.setText("choose photo");
         btnimage.addActionListener(new java.awt.event.ActionListener() {
@@ -177,118 +223,39 @@ public class CreateJPanel extends javax.swing.JPanel {
                 btnimageActionPerformed(evt);
             }
         });
+        add(btnimage, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 352, 222, -1));
 
         txtImgPath.setText("jTextField1");
+        add(txtImgPath, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 324, 0, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblName)
-                            .addComponent(lblGender)
-                            .addComponent(lbtStartDate)
-                            .addComponent(lbllevel)
-                            .addComponent(lblTeamInfo)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblEmployeeID, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lbtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblphone)
-                                .addComponent(lblPosTitle)
-                                .addComponent(lblemail)
-                                .addComponent(lblPhoto)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEmployeeID, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtLvl, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(btnimage, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtImgPath, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCellPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSave))))
-                .addContainerGap(211, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(lblTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmployeeID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEmployeeID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbtAge))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblGender))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbtStartDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLvl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbllevel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTeamInfo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPosTitle))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCellPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblphone))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblemail))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPhoto)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnimage)
-                        .addComponent(txtImgPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
-                .addComponent(btnSave))
-        );
+        ValidAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                ValidAgeKeyReleased(evt);
+            }
+        });
+        add(ValidAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 100, -1, 22));
+
+        lblphone1.setText("Contact Info");
+        add(lblphone1, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 274, -1, -1));
+
+        lbtAge.setText("Age");
+        add(lbtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 103, 53, -1));
+
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
+        txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtAgeKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAgeKeyReleased(evt);
+            }
+        });
+        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 100, 222, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtEmployeeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmployeeIDActionPerformed
 
     private void txtStartDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStartDateActionPerformed
         // TODO add your handling code here:
@@ -298,9 +265,9 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPositionTitleActionPerformed
 
-    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+    private void txtEmployeeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAgeActionPerformed
+    }//GEN-LAST:event_txtEmployeeIDActionPerformed
 
     private void txtTeamInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTeamInfoActionPerformed
         // TODO add your handling code here:
@@ -330,9 +297,13 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
 
+    //Random r = new Random();
+    //int randomInt = r.nextInt(10000000) + 1;
+    
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         String name = txtName.getText();
+        //int EmployeeID = randomInt;
         String EmployeeID = txtEmployeeID.getText();
         String age = txtAge.getText();
         String gender = txtGender.getText();
@@ -344,6 +315,39 @@ public class CreateJPanel extends javax.swing.JPanel {
         String email_id = txtEmail.getText();
         String img_path = txtImgPath.getText();
         
+        if (!Pattern.matches("^(1[89]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-5]\\d)$", txtAge.getText()))
+        {
+            JOptionPane.showMessageDialog(null, "Invalid Age Range 18 to 65", "Error", JOptionPane.ERROR_MESSAGE);
+            btnSave.setEnabled(false);
+        }
+        
+        else if (!Pattern.matches("^^(?:m|M|male|Male|MALE|f|F|female|Female|FEMALE)$",txtGender.getText()))
+        {
+          JOptionPane.showMessageDialog(null, "Gender has to be male or female", "Error", JOptionPane.ERROR_MESSAGE);
+          btnSave.setEnabled(false);  
+        }
+        else if (!Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$" , txtStartDate.getText()))
+        {
+            JOptionPane.showMessageDialog(null, "Incorrect Start Date", "Error", JOptionPane.ERROR_MESSAGE);
+            btnSave.setEnabled(false);
+        }
+         else if (!Pattern.matches("^(\\+1)?[0-9]{10}$", txtCellPhone.getText()))
+        {
+             JOptionPane.showMessageDialog(null, "Cell phone should be 10 digit", "Error", JOptionPane.ERROR_MESSAGE);
+             btnSave.setEnabled(false);
+        }
+        
+        else if (!Pattern.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", txtEmail.getText()))
+        {
+            JOptionPane.showMessageDialog(null, "Incorrect Email Address", "Error", JOptionPane.ERROR_MESSAGE);
+            btnSave.setEnabled(false);
+        }
+        
+        
+       
+        else
+        {
         
         Employee emp = history.addNewEmployee();
         emp.setName(name);
@@ -360,12 +364,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         
         
-        
-       
-        
         //JOptionPane,showMessageDialog(this, "Employee info saved");
         JOptionPane.showMessageDialog(this, "New Employee information added successfully");
         txtName.setText("");
+        txtEmployeeID.setText("");
         txtAge.setText("");
         txtGender.setText("");
         txtStartDate.setText("");
@@ -375,23 +377,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtCellPhone.setText("");
         txtEmail.setText("");
         txtImgPath.setText("");
-        txtEmployeeID.setText("");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //txtEmployeeID.setText("");
+        }
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnimageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnimageActionPerformed
@@ -408,10 +395,59 @@ public class CreateJPanel extends javax.swing.JPanel {
             String file_path = choosen_file.getAbsolutePath();
             System.out.println("file_path: "+file_path);
             txtImgPath.setText(file_path);
+        }
     }//GEN-LAST:event_btnimageActionPerformed
 
-    }
+    private void txtEmployeeIDKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmployeeIDKeyReleased
+   
+    }//GEN-LAST:event_txtEmployeeIDKeyReleased
+
+    private void ValidAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ValidAgeKeyReleased
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ValidAgeKeyReleased
+
+    private void txtEmployeeIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmployeeIDKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true);
+    }//GEN-LAST:event_txtEmployeeIDKeyPressed
+
+    private void txtGenderKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGenderKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true);  
+    }//GEN-LAST:event_txtGenderKeyPressed
+
+    private void txtStartDateKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStartDateKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true); 
+    }//GEN-LAST:event_txtStartDateKeyPressed
+
+    private void txtCellPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCellPhoneKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true); 
+    }//GEN-LAST:event_txtCellPhoneKeyPressed
+
+    private void txtEmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true); 
+    }//GEN-LAST:event_txtEmailKeyPressed
+
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
+
+    private void txtAgeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgeKeyPressed
+        // TODO add your handling code here:
+        btnSave.setEnabled(true); 
+    }//GEN-LAST:event_txtAgeKeyPressed
+
+    private void txtAgeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgeKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeKeyReleased
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ValidAge;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnimage;
     private javax.swing.JTextField jTextField13;
@@ -425,6 +461,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblemail;
     private javax.swing.JLabel lbllevel;
     private javax.swing.JLabel lblphone;
+    private javax.swing.JLabel lblphone1;
     private javax.swing.JLabel lbtAge;
     private javax.swing.JLabel lbtStartDate;
     private javax.swing.JLabel lbtTitle6;
