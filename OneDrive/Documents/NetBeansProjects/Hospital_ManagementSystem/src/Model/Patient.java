@@ -14,6 +14,8 @@ public class Patient {
     private String Gender;
     private String Mobile_Number;
     private String Email_ID;
+    
+
 
     public String getName() {
         return Name;

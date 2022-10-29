@@ -10,23 +10,30 @@ import java.util.ArrayList;
  *
  * @author sarth
  */
-public class PatientDirectory {
-private ArrayList<Patient> history;
-public PatientDirectory(){
-    this.history = new ArrayList<Patient>();
-}
-public ArrayList<Patient> getHistory() {
-        return history;
+public class PatientDirectory 
+{
+    private ArrayList<Patient> directory;
+    
+    public PatientDirectory()
+    {
+        this.directory = new ArrayList<Patient>();
     }
-public void setHistory(ArrayList<Patient> history) {
-        this.history = history;
+    
+    public ArrayList<Patient> setDirectory() {
+        return directory;
     }
+    
+    public void setDirectory(ArrayList<Patient> directory) {
+        this.directory = directory;
+    }
+    
 public Patient addNewPatient(){
-        Patient newPatient = new Patient();
-        history.add(newPatient);
+      
+    Patient newPatient = new Patient();
+        directory.add(newPatient);
         return newPatient;
     }
 public void deletePatient(Patient vs){
-       history.remove(vs);
+       directory.remove(vs);
     }
 }

@@ -4,6 +4,7 @@
  */
 package UI;
 
+import Model.PatientDirectory;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,7 +16,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorJPanel
      */
-    public DoctorJPanel() {
+    public DoctorJPanel(PatientDirectory directory) {
         initComponents();
     }
 

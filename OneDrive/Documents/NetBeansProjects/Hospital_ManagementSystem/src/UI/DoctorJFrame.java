@@ -136,9 +136,10 @@ public class DoctorJFrame extends javax.swing.JFrame {
 
     private void btnAddPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPatientActionPerformed
         // TODO add your handling code here:
+    DoctorAddJPanel createPanel9 = new DoctorAddJPanel();
+    jSplitPane1.setRightComponent(createPanel9);
     //new DoctorAddJPanel().setVisible(true);
-    DoctorAddJPanel createPanel8 = new DoctorAddJPanel();
-    jSplitPane1.setRightComponent(createPanel8);
+    
     }//GEN-LAST:event_btnAddPatientActionPerformed
 
     private void btnViewEncounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewEncounterActionPerformed

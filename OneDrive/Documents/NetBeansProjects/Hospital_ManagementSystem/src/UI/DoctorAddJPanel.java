@@ -4,6 +4,10 @@
  */
 package UI;
 
+import Model.Patient;
+import Model.PatientDirectory;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author sarth
@@ -13,9 +17,18 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorAddJPanel
      */
-    public DoctorAddJPanel() {
+    PatientDirectory directory;
+    
+    public DoctorAddJPanel(PatientDirectory directory) {
         initComponents();
+        this.directory = directory;
     }
+
+    DoctorAddJPanel() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,9 +49,7 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
         txtAge = new javax.swing.JTextField();
         txtGender = new javax.swing.JTextField();
         txtMobileNumber = new javax.swing.JTextField();
-        txtSSN = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
-        lblSSN = new javax.swing.JLabel();
         txtEmailID1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
@@ -65,20 +76,12 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtSSN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSSNActionPerformed(evt);
-            }
-        });
-
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-
-        lblSSN.setText("SSN");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Add Patient");
@@ -103,7 +106,7 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGap(22, 22, 22)
@@ -114,11 +117,8 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
                                 .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(lblSSN, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnSave)
-                                .addComponent(txtSSN, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnSave)
+                            .addGap(158, 158, 158)))
                     .addComponent(lblAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblGender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblMobileNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -126,7 +126,7 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblAge, lblEmailID, lblGender, lblMobileNumber, lblName, txtAge, txtGender, txtMobileNumber, txtName, txtSSN});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblAge, lblEmailID, lblGender, lblMobileNumber, lblName, txtAge, txtGender, txtMobileNumber, txtName});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,16 +158,12 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtEmailID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEmailID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSSN)
-                    .addComponent(txtSSN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(46, 46, 46)
                 .addComponent(btnSave)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblAge, lblEmailID, lblGender, lblMobileNumber, lblName, txtAge, txtGender, txtMobileNumber, txtName, txtSSN});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblAge, lblEmailID, lblGender, lblMobileNumber, lblName, txtAge, txtGender, txtMobileNumber, txtName});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -189,15 +185,31 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+    String Name = txtName.getText();
+    String Age = txtAge.getText();
+    String Gender = txtGender.getText();
+    String MobileNumber = txtMobileNumber.getText();
+    String EmailID1 = txtEmailID1.getText();
+    
+    
+    Patient vs = directory.addNewPatient();
+    vs.setName(Name);
+    vs.setAge(Age);
+    vs.setGender(Gender);
+    vs.setMobile_Number(MobileNumber);
+    vs.setEmail_ID(EmailID1);
+    JOptionPane.showMessageDialog(this, "new patient added");
+    txtName.setText("");
+    txtAge.setText("");
+    txtGender.setText("");
+    txtMobileNumber.setText("");
+    txtEmailID1.setText("");
+    
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtGenderActionPerformed
-
-    private void txtSSNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSSNActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSSNActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -214,12 +226,10 @@ public class DoctorAddJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblMobileNumber;
     private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblSSN;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmailID1;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtMobileNumber;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtSSN;
     // End of variables declaration//GEN-END:variables
 }
