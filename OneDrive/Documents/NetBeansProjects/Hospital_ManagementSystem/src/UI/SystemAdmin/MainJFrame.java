@@ -15,7 +15,7 @@ import Model.Vitals.VitalsDirectory;
 import javax.swing.JOptionPane;
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 
 public class MainJFrame extends javax.swing.JFrame {

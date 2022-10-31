@@ -23,7 +23,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class NewPatientEncounterJPanel extends javax.swing.JPanel {
 

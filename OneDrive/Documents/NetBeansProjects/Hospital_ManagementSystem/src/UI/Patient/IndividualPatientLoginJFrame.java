@@ -16,7 +16,7 @@ import UI.Encounter.EncounterRecordsJPanel;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
 

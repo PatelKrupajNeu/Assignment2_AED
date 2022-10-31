@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class PatientLoginJFrame extends javax.swing.JFrame {
 

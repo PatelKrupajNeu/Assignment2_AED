@@ -17,7 +17,7 @@ import javax.swing.*;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 import java.awt.Window;
 public class LoginAdminJPanel extends javax.swing.JPanel {

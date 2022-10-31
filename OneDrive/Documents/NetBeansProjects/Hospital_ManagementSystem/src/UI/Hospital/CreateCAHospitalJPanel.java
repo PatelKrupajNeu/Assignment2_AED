@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class CreateCAHospitalJPanel extends javax.swing.JPanel {
 

@@ -20,7 +20,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class CreateVitalsJPanel extends javax.swing.JPanel {
 

@@ -18,7 +18,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class HospitalSearchJPanel extends javax.swing.JPanel {
 

@@ -6,7 +6,7 @@ package Model.SignUp;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class SignUp {
     private int PersonID;

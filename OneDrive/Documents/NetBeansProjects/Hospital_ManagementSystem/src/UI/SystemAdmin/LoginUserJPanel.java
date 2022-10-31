@@ -22,7 +22,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class LoginUserJPanel extends javax.swing.JPanel {
 

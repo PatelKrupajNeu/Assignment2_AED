@@ -6,7 +6,7 @@ package Model.Encounter;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class Encounter {
     

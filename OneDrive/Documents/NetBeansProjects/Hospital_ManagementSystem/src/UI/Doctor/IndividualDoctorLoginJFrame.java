@@ -16,7 +16,7 @@ import UI.Vitals.ReadVitalsJPanel;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
 

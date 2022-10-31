@@ -16,7 +16,7 @@ import UI.Hospital.ReadCAHospitalJPanel;
 
 /**
  *
- * @author sohamdeshpande
+ * @author sarth
  */
 public class CommunityJFrame extends javax.swing.JFrame {
 
