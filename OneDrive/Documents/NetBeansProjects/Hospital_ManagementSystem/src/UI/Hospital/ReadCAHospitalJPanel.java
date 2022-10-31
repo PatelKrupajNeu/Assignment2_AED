@@ -414,7 +414,7 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
             model.setValueAt(CreatePassword, tblHospitalDirectory.getSelectedRow(), 6);
             //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 8);
 
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Hospital Details Updated");
 
             txtHospitalName.setText("");
             txtCommunityName.setText("");
@@ -502,7 +502,7 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
 
         HospitalDirectory.deleteEmployee(selectedSignUp);
 
-        JOptionPane.showMessageDialog(this, "Person Details deleted.");
+        JOptionPane.showMessageDialog(this, "Hospital Details deleted.");
 
         populateTable();
     }//GEN-LAST:event_btnHospitalDeleteActionPerformed

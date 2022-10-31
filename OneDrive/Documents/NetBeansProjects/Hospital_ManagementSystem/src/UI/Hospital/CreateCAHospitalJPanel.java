@@ -212,7 +212,7 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         h.setCreatePassword(CreatePassword);
         h.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is ");
+        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is " +  String.valueOf(h.getHospitalID()));
 
         txtHospitalName.setText("");
         txtCreatePassword.setText("");
