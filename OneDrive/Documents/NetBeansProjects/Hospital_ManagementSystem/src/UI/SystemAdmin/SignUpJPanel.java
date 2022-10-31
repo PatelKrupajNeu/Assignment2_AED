@@ -182,14 +182,12 @@ public class SignUpJPanel extends javax.swing.JPanel {
 
         jLabel2.setText("Enter Date of Birth in MM/DD/YYYY");
 
-        jLabel3.setText("Enter valid age between 1 to 99");
-
         jLabel4.setText("Enter your address");
 
-        jLabel5.setText("Create a strong password");
+        jLabel5.setText("Create a good password");
 
         jLabel6.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jLabel6.setText("ADMIN SIGN UP");
+        jLabel6.setText("PERSON SIGN UP");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -200,7 +198,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -249,7 +247,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
                                 .addComponent(txtCitySignUp)
                                 .addComponent(txtStateSignUp)
                                 .addComponent(txtPinCodeSignUp)))))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,11 +312,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
              JOptionPane.showMessageDialog(null, "Age cannot be Negative!", "Error", JOptionPane.ERROR_MESSAGE);
              btnSignUp.setEnabled(false);
          }
-        else if (!Pattern.matches("^(1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9])$", txtAgeSignUp.getText())) 
-         {
-             JOptionPane.showMessageDialog(null, "Age should be between 1 to 99!", "Error", JOptionPane.ERROR_MESSAGE);
-             btnSignUp.setEnabled(false);
-         }
+        
         
         else if (!(Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$", txtDoBSignUp.getText())))
         {

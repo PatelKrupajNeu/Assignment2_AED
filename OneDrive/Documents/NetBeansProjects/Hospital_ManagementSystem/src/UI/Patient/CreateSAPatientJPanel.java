@@ -412,6 +412,7 @@ public class CreateSAPatientJPanel extends javax.swing.JPanel {
         txtPinCodeSignUp.setText("");
         txtCreatePasswordDoctor.setText("");
         txtConfirmPasswordDoctor.setText("");
+        
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void txtHospitalIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalIDActionPerformed

@@ -46,34 +46,32 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="btnSubmit" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtNameSignUp" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtNameSignUp" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="txtPersonID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtHospitalName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtHospitalID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtPersonID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtHospitalName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtHospitalID" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="btnSubmit" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="lblName1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -147,9 +145,9 @@
                   <Component id="lblConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtConfirmPasswordDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="305" max="32767" attributes="0"/>
+              <EmptySpace pref="299" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

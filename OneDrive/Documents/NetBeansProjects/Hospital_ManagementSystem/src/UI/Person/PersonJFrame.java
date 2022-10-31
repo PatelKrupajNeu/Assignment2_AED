@@ -396,7 +396,7 @@ public class PersonJFrame extends javax.swing.JFrame {
 
             if (!Pattern.matches("^\\d+$", txtAgeSignUp.getText()))
             {
-                JOptionPane.showMessageDialog(null, "Age cannot be Negative!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Age cannot be Negative!", "Error, enter a valid age", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
             else if (!Pattern.matches("^(1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9])$", txtAgeSignUp.getText()))
@@ -423,7 +423,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             else if (!txtCreatePasswordSignUp.getText().equals(txtConfirmPasswordSignUp.getText()))
             {
 
-                JOptionPane.showMessageDialog(null, "Your Password should match!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Your Password should match!", "Please enter a correct password", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
             else if (Pattern.matches("^$", txtNameSignUp.getText()))
