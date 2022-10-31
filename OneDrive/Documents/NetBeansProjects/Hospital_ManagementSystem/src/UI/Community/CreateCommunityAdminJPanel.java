@@ -67,6 +67,8 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
         txtConfirmPassword = new javax.swing.JPasswordField();
         btnSubmit = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         jLabel1.setText("Community Name:");
 
         jLabel2.setText("City:");
@@ -77,7 +79,7 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
 
         jLabel5.setText("Address:");
 
-        jLabel6.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jLabel6.setText("Create Community ");
 
         txtCity.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +93,7 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
         jLabel8.setText("Confirm Password:");
 
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -102,40 +105,36 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSubmit)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPinCode)
-                                    .addComponent(txtState)
-                                    .addComponent(txtCity)
-                                    .addComponent(txtAddress)
-                                    .addComponent(txtCommunityName)
-                                    .addComponent(txtCreatePassword)
-                                    .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPinCode)
+                            .addComponent(txtState)
+                            .addComponent(txtCity)
+                            .addComponent(txtAddress)
+                            .addComponent(txtCommunityName)
+                            .addComponent(txtCreatePassword)
+                            .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(133, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addComponent(jLabel6)
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -163,9 +162,9 @@ public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(btnSubmit)
-                .addContainerGap(456, Short.MAX_VALUE))
+                .addContainerGap(470, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

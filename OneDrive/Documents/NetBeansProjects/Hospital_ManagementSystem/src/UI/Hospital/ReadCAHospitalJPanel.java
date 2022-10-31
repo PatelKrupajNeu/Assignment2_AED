@@ -89,6 +89,8 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         txtCommunityID = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         lblCity.setText("City:");
 
         txtCreatePassword.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +188,8 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
 
         lblName.setText("Name of the Hospital:");
 
-        jLabel1.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         jLabel1.setText("Hospital Records");
 
         jLabel2.setText("Search Hospital:");
@@ -245,13 +248,10 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(btnUpdateHospital)
                         .addGroup(layout.createSequentialGroup()
@@ -337,7 +337,7 @@ public class ReadCAHospitalJPanel extends javax.swing.JPanel {
                     .addComponent(lblConfirmPassword))
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdateHospital)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
