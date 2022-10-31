@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class PersonJFrame extends javax.swing.JFrame {
 
@@ -81,7 +81,6 @@ public class PersonJFrame extends javax.swing.JFrame {
         btnLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(204, 204, 255));
 
         lblCity.setText("City:");
 
@@ -166,7 +165,6 @@ public class PersonJFrame extends javax.swing.JFrame {
         lblDoB.setText("DoB:");
 
         btnUpdateSignUp.setText("Update");
-        btnUpdateSignUp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSignUpActionPerformed(evt);
@@ -208,8 +206,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnFetch.setText("FETCH");
-        btnFetch.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnFetch.setText("Fetch");
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFetchActionPerformed(evt);
@@ -321,7 +318,7 @@ public class PersonJFrame extends javax.swing.JFrame {
                     .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdateSignUp)
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
 
         pack();
@@ -403,23 +400,23 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
             else if (!Pattern.matches("^(1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0-9]|7[0-9]|8[0-9]|9[0-9])$", txtAgeSignUp.getText()))
             {
-                JOptionPane.showMessageDialog(null, "Please enter a valid age should be between 1 to 99!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Age should be between 1 to 99!", "Error", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
 
             else if (!(Pattern.matches("^[0,1]?\\d{1}\\/(([0-2]?\\d{1})|([3][0,1]{1}))\\/(([1]{1}[9]{1}[9]{1}\\d{1})|([2-9]{1}\\d{3}))$", txtDoBSignUp.getText())))
             {
-                JOptionPane.showMessageDialog(null, "Please enter valid date in mm/dd/yyyy format!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Please enter date in mm/dd/yyyy format!", "Error", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
             else if (!(Pattern.matches("^([0-9]{5})$", txtPinCodeSignUp.getText())))
             {
-                JOptionPane.showMessageDialog(null, "Please enter a valid Pin Code of 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Pin Code should be 5 digits only!", "Error", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
             else if (!Pattern.matches("^(([a-z]|[0-9]){5})$", txtCreatePasswordSignUp.getText()))
             {
-                JOptionPane.showMessageDialog(null, "Please enter a valid password of a  combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The password should be a combination of characters and digits of length 5!", "Error", JOptionPane.ERROR_MESSAGE);
                 btnUpdateSignUp.setEnabled(false);
             }
             else if (!txtCreatePasswordSignUp.getText().equals(txtConfirmPasswordSignUp.getText()))

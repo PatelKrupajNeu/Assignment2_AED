@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class CreateCommunityAdminJPanel extends javax.swing.JPanel {
 

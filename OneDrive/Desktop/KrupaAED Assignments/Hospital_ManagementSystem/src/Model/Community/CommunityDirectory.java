@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class CommunityDirectory {
     private ArrayList<Community> CommunityDirectory;

@@ -15,7 +15,7 @@ import Model.Vitals.VitalsDirectory;
 import javax.swing.JOptionPane;
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 
 public class MainJFrame extends javax.swing.JFrame {
@@ -79,29 +79,24 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        controlPanelMain.setBackground(new java.awt.Color(153, 204, 255));
-
-        btnAdmin.setText("SYSTEM ADMIN");
-        btnAdmin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAdmin.setText("System Admin");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
             }
         });
 
-        btnCustomer.setText("USERS");
-        btnCustomer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnCustomer.setText("Users");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCustomerActionPerformed(evt);
             }
         });
 
-        lblHospitalManagementSystem.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 18)); // NOI18N
+        lblHospitalManagementSystem.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         lblHospitalManagementSystem.setText("Hospital Management System");
 
-        btnSignUp.setText("SIGN UP");
-        btnSignUp.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignUpActionPerformed(evt);
@@ -122,16 +117,16 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(controlPanelMainLayout.createSequentialGroup()
-                        .addGap(145, 145, 145)
+                        .addGap(150, 150, 150)
                         .addComponent(lblHospitalManagementSystem)))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         controlPanelMainLayout.setVerticalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelMainLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblHospitalManagementSystem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdmin)
                     .addComponent(btnCustomer)
@@ -140,8 +135,6 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         splitPaneMain.setTopComponent(controlPanelMain);
-
-        workAreaMain.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout workAreaMainLayout = new javax.swing.GroupLayout(workAreaMain);
         workAreaMain.setLayout(workAreaMainLayout);

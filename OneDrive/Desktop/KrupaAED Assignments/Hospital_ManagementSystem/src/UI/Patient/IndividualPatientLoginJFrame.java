@@ -16,7 +16,7 @@ import UI.Encounter.EncounterRecordsJPanel;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
 
@@ -63,7 +63,6 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnRaiseEncounter.setText("Raise Encounter");
-        btnRaiseEncounter.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRaiseEncounter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseEncounterActionPerformed(evt);
@@ -71,7 +70,6 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
         });
 
         btnEncounterRecords.setText("<html>\n<center>\nEncounter <br> Records\n</center>\n</html>");
-        btnEncounterRecords.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnEncounterRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEncounterRecordsActionPerformed(evt);
@@ -79,7 +77,6 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
         });
 
         btnLogOut.setText("Log Out");
-        btnLogOut.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -107,18 +104,16 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
                 .addComponent(btnEncounterRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(287, 287, 287)
                 .addComponent(btnLogOut)
-                .addContainerGap(391, Short.MAX_VALUE))
+                .addContainerGap(389, Short.MAX_VALUE))
         );
 
         splitIndividualPatientPane.setLeftComponent(jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGap(0, 495, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

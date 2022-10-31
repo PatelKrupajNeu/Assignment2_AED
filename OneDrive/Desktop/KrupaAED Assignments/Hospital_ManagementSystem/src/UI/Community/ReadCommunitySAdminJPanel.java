@@ -19,7 +19,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class ReadCommunitySAdminJPanel extends javax.swing.JPanel {
 

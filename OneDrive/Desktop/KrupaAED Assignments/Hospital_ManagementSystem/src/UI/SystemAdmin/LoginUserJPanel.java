@@ -21,7 +21,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class LoginUserJPanel extends javax.swing.JPanel {
 
@@ -61,52 +61,32 @@ public class LoginUserJPanel extends javax.swing.JPanel {
         btnHospitalAdmin = new javax.swing.JButton();
         btnDoctor = new javax.swing.JButton();
         btnPatient = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnPatient1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
-
-        btnPerson.setText("PERSON");
-        btnPerson.setActionCommand("PERSON\n");
-        btnPerson.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPerson.setText("Person");
         btnPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonActionPerformed(evt);
             }
         });
 
-        btnHospitalAdmin.setText("HOSPITAL ADMIN");
-        btnHospitalAdmin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnHospitalAdmin.setText("Hospital Admin");
         btnHospitalAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHospitalAdminActionPerformed(evt);
             }
         });
 
-        btnDoctor.setText("DOCTOR");
-        btnDoctor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDoctor.setText("Doctor");
         btnDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoctorActionPerformed(evt);
             }
         });
 
-        btnPatient.setText("PATIENT");
-        btnPatient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPatient.setText("Patient");
         btnPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPatientActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel1.setText("LOGIN ");
-
-        btnPatient1.setText("COMMUNITY");
-        btnPatient1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnPatient1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPatient1ActionPerformed(evt);
             }
         });
 
@@ -115,33 +95,26 @@ public class LoginUserJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnHospitalAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                        .addComponent(btnDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPatient1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnPerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnHospitalAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(60, 60, 60)
+                .addGap(50, 50, 50)
                 .addComponent(btnPerson)
-                .addGap(49, 49, 49)
-                .addComponent(btnDoctor)
-                .addGap(66, 66, 66)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnHospitalAdmin)
-                .addGap(59, 59, 59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDoctor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPatient)
-                .addGap(65, 65, 65)
-                .addComponent(btnPatient1)
-                .addContainerGap(350, Short.MAX_VALUE))
+                .addContainerGap(622, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -172,18 +145,12 @@ public class LoginUserJPanel extends javax.swing.JPanel {
         ((Window) comp).dispose();
     }//GEN-LAST:event_btnPatientActionPerformed
 
-    private void btnPatient1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatient1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPatient1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDoctor;
     private javax.swing.JButton btnHospitalAdmin;
     private javax.swing.JButton btnPatient;
-    private javax.swing.JButton btnPatient1;
     private javax.swing.JButton btnPerson;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
     private void dispose() {

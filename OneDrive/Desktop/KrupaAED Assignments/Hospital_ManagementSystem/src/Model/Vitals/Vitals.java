@@ -6,7 +6,7 @@ package Model.Vitals;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class Vitals {
     private int VitalID;

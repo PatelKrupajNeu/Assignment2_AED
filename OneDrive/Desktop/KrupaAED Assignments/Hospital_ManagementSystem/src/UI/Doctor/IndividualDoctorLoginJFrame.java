@@ -16,7 +16,7 @@ import UI.Vitals.ReadVitalsJPanel;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
 
@@ -92,7 +92,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCreateVitals, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnViewVitalsHistory))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -115,8 +115,6 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
         );
 
         splitDoctorIndividualPane.setLeftComponent(jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
