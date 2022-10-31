@@ -67,7 +67,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
 
         lblPassword.setText("Password:");
 
-        btnLogIn.setText("Log In");
+        btnLogIn.setText("LOGIN");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogInActionPerformed(evt);

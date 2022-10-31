@@ -552,14 +552,18 @@ public class PersonJFrame extends javax.swing.JFrame {
                         check = false;
                         break;
                     } 
+            
+            
+            
             else
             {
+                
                 check = true;
             }
         }
     }//GEN-LAST:event_btnFetchActionPerformed
         if(check == true){
-            JOptionPane.showMessageDialog(this, "This user doesn't exist");
+            JOptionPane.showMessageDialog(this, "Enter valid user and password");
             }   
     }
     

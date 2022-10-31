@@ -81,7 +81,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogIn.setText("Log In");
+        btnLogIn.setText("LOGIN");
         btnLogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogInActionPerformed(evt);

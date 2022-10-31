@@ -368,7 +368,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
             model.setValueAt(Date, tblEncounterDirectory.getSelectedRow(), 5);
             model.setValueAt(TimeStamp, tblEncounterDirectory.getSelectedRow(), 6);
             
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Encounter Details Updated");
 
             txtEncounterID.setText("");
             txtDoctorName.setText("");

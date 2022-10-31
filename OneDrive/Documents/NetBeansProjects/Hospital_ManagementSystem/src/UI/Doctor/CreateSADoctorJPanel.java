@@ -443,7 +443,7 @@ public class CreateSADoctorJPanel extends javax.swing.JPanel {
         d.setCreatePassword(CreatePassword);
         d.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is ");
+        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is " +  String.valueOf(d.getDoctorID()));
 
         txtPersonID.setText("");
         txtNameSignUp.setText("");

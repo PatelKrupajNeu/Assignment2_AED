@@ -540,7 +540,7 @@ public class ReadSADoctorJPanel extends javax.swing.JPanel {
             model.setValueAt(CreatePassword, tblDoctorDirectory.getSelectedRow(), 10);
             //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 9);
 
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Doctor Details Updated");
 
             txtDoctorID.setText("");
             txtHospitalID.setText("");
