@@ -79,6 +79,8 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         lblConfirmPassword = new javax.swing.JLabel();
         txtCommunityID = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
