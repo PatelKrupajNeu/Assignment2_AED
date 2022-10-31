@@ -70,27 +70,19 @@ public class MainJFrame extends javax.swing.JFrame {
         lblHospitalManagementSystem = new javax.swing.JLabel();
         btnSignUp = new javax.swing.JButton();
         workAreaMain = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        controlPanelMain.setBackground(new java.awt.Color(153, 153, 255));
-
-        btnAdmin.setBackground(new java.awt.Color(204, 204, 204));
-        btnAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnAdmin.setText("ADMIN LOGIN");
+        btnAdmin.setText("Log In as Admin");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
             }
         });
 
-        btnCustomer.setBackground(new java.awt.Color(204, 204, 204));
-        btnCustomer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnCustomer.setText("USERS");
+        btnCustomer.setText("Users");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCustomerActionPerformed(evt);
@@ -98,11 +90,9 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         lblHospitalManagementSystem.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
-        lblHospitalManagementSystem.setText("CURE HOSPITAL");
+        lblHospitalManagementSystem.setText("Hospital Management System");
 
-        btnSignUp.setBackground(new java.awt.Color(204, 204, 204));
-        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnSignUp.setText("SIGN UP");
+        btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignUpActionPerformed(evt);
@@ -114,23 +104,25 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanelMainLayout.setHorizontalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelMainLayout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(btnAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHospitalManagementSystem)
                     .addGroup(controlPanelMainLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(btnAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(93, Short.MAX_VALUE))
+                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(controlPanelMainLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(lblHospitalManagementSystem)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         controlPanelMainLayout.setVerticalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelMainLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblHospitalManagementSystem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdmin)
                     .addComponent(btnCustomer)
@@ -140,33 +132,15 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setTopComponent(controlPanelMain);
 
-        workAreaMain.setBackground(new java.awt.Color(204, 204, 255));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/SystemAdmin/aa.jpg"))); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jLabel2.setText("WELCOME TO HOSPITAL MANAGEMENT SYSTEM");
-
         javax.swing.GroupLayout workAreaMainLayout = new javax.swing.GroupLayout(workAreaMain);
         workAreaMain.setLayout(workAreaMainLayout);
         workAreaMainLayout.setHorizontalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaMainLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaMainLayout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(99, 99, 99))
+            .addGap(0, 600, Short.MAX_VALUE)
         );
         workAreaMainLayout.setVerticalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(workAreaMainLayout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(246, 246, 246))
+            .addGap(0, 689, Short.MAX_VALUE)
         );
 
         splitPaneMain.setRightComponent(workAreaMain);
@@ -252,8 +226,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnCustomer;
     private javax.swing.JButton btnSignUp;
     private javax.swing.JPanel controlPanelMain;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHospitalManagementSystem;
     private javax.swing.JSplitPane splitPaneMain;
     private javax.swing.JPanel workAreaMain;
