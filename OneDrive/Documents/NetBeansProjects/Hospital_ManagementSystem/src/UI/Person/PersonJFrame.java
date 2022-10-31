@@ -4,6 +4,7 @@
  */
 package UI.Person;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.Doctor;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
@@ -18,7 +19,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sarth
+ * @author sohamdeshpande
  */
 public class PersonJFrame extends javax.swing.JFrame {
 
@@ -31,8 +32,9 @@ public class PersonJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public PersonJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public PersonJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -40,6 +42,7 @@ public class PersonJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -78,6 +81,7 @@ public class PersonJFrame extends javax.swing.JFrame {
         btnLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
 
         lblCity.setText("City:");
 
@@ -210,7 +214,7 @@ public class PersonJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogOut.setText("Log Out");
+        btnLogOut.setText("Back");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -560,8 +564,8 @@ public class PersonJFrame extends javax.swing.JFrame {
     }
     
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
+        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     /**
