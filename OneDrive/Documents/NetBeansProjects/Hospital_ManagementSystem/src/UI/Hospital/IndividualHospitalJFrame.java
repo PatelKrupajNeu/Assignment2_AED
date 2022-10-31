@@ -65,6 +65,9 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateDoctor.setBackground(new java.awt.Color(255, 204, 204));
         btnCreateDoctor.setText("Create Doctor");
         btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +75,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDoctorRecords.setBackground(new java.awt.Color(255, 204, 204));
         btnDoctorRecords.setText("Doctor Records");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreatePatient.setBackground(new java.awt.Color(255, 204, 204));
         btnCreatePatient.setText("Create Patient");
         btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +91,7 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
             }
         });
 
+        PatientRecords.setBackground(new java.awt.Color(255, 204, 204));
         PatientRecords.setText("Patient Records");
         PatientRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +145,8 @@ public class IndividualHospitalJFrame extends javax.swing.JFrame {
         );
 
         splitHospitalPane.setLeftComponent(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

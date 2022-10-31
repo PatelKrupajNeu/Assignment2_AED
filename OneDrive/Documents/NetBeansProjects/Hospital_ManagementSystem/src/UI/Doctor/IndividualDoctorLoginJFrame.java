@@ -62,6 +62,9 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateVitals.setBackground(new java.awt.Color(255, 204, 204));
         btnCreateVitals.setText("Create Vitals");
         btnCreateVitals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +72,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnViewVitalsHistory.setBackground(new java.awt.Color(255, 204, 204));
         btnViewVitalsHistory.setText("<html>\n<center>\nView <br> Vitals <br> History\n</center>\n</html>");
         btnViewVitalsHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +119,8 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
         );
 
         splitDoctorIndividualPane.setLeftComponent(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

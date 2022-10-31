@@ -76,9 +76,12 @@ public class AdminJFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnLogOut.setBackground(new java.awt.Color(255, 204, 204));
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +89,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreate.setBackground(new java.awt.Color(255, 204, 204));
         btnCreate.setText("<html> <center> Create <br> Hospital </center> </html>");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +97,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnReadPerson.setBackground(new java.awt.Color(255, 204, 204));
         btnReadPerson.setText("<html> <center> Manage <br> Person <br> Records </center> </html>");
         btnReadPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +105,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnReadHospital.setBackground(new java.awt.Color(255, 204, 204));
         btnReadHospital.setText("<html> <center> Manage <br> Hospital <br> Records </center> </html>");
         btnReadHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +113,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDoctorRecords.setBackground(new java.awt.Color(255, 204, 204));
         btnDoctorRecords.setText("<html>\n<center>\nDoctor <br> Records\n</center>\n</html>");
         btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +121,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreateDoctor.setBackground(new java.awt.Color(255, 204, 204));
         btnCreateDoctor.setText("<html>\n<center>\nCreate <br> Doctor\n</center>\n</html>");
         btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +129,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreatePatient.setBackground(new java.awt.Color(255, 204, 204));
         btnCreatePatient.setText("<html> <center> Create <br> Patient </center> </html>");
         btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +137,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnPatientRecords.setBackground(new java.awt.Color(255, 204, 204));
         btnPatientRecords.setText("<html> <center> Patient <br> Records </center> </html>");
         btnPatientRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +145,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 204, 204));
         jButton1.setText("Create Community");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +153,7 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 204, 204));
         jButton2.setText("Manage Community");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,15 +211,33 @@ public class AdminJFrame extends javax.swing.JFrame {
 
         adminSplitPane.setLeftComponent(jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("WELCOME");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("ADMIN PANEL");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(182, 182, 182)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addContainerGap(280, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addContainerGap(688, Short.MAX_VALUE))
         );
 
         adminSplitPane.setRightComponent(jPanel2);
@@ -334,6 +364,8 @@ public class AdminJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnReadPerson;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

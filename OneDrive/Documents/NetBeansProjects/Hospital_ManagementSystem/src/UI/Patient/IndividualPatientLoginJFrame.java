@@ -64,6 +64,9 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnRaiseEncounter.setBackground(new java.awt.Color(255, 204, 204));
         btnRaiseEncounter.setText("Raise Encounter");
         btnRaiseEncounter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +74,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnEncounterRecords.setBackground(new java.awt.Color(255, 204, 204));
         btnEncounterRecords.setText("<html>\n<center>\nEncounter <br> Records\n</center>\n</html>");
         btnEncounterRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +89,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnVitalsHistory.setBackground(new java.awt.Color(255, 204, 204));
         btnVitalsHistory.setText("Vitals History");
         btnVitalsHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +97,7 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnHospitalSearch.setBackground(new java.awt.Color(255, 204, 204));
         btnHospitalSearch.setText("Hospital Search");
         btnHospitalSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +136,8 @@ public class IndividualPatientLoginJFrame extends javax.swing.JFrame {
         );
 
         splitIndividualPatientPane.setLeftComponent(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

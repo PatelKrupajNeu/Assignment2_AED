@@ -79,6 +79,8 @@ public class ReadPersonJPanel extends javax.swing.JPanel {
         txtSearchPerson = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+
         tblPersonDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -201,7 +203,7 @@ public class ReadPersonJPanel extends javax.swing.JPanel {
 
         lblName.setText("Name:");
 
-        jLabel1.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         jLabel1.setText("Person Records");
 
         txtCreatePasswordSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -335,7 +337,7 @@ public class ReadPersonJPanel extends javax.swing.JPanel {
                     .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnUpdateSignUp)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

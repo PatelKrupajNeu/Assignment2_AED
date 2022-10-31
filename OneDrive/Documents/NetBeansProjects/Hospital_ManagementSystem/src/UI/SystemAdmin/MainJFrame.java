@@ -74,11 +74,16 @@ public class MainJFrame extends javax.swing.JFrame {
         lblHospitalManagementSystem = new javax.swing.JLabel();
         btnSignUp = new javax.swing.JButton();
         workAreaMain = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        controlPanelMain.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnAdmin.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 12)); // NOI18N
         btnAdmin.setText("System Admin");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +91,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCustomer.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         btnCustomer.setText("Users");
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,9 +99,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblHospitalManagementSystem.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
+        lblHospitalManagementSystem.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         lblHospitalManagementSystem.setText("Hospital Management System");
 
+        btnSignUp.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,25 +115,23 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanelMainLayout.setHorizontalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelMainLayout.createSequentialGroup()
-                .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(57, 57, 57)
+                .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblHospitalManagementSystem)
                     .addGroup(controlPanelMainLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
                         .addComponent(btnAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(controlPanelMainLayout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(lblHospitalManagementSystem)))
-                .addContainerGap(69, Short.MAX_VALUE))
+                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         controlPanelMainLayout.setVerticalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelMainLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(11, Short.MAX_VALUE)
                 .addComponent(lblHospitalManagementSystem)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdmin)
                     .addComponent(btnCustomer)
@@ -136,15 +141,34 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setTopComponent(controlPanelMain);
 
+        workAreaMain.setBackground(new java.awt.Color(204, 204, 255));
+
+        jLabel1.setFont(new java.awt.Font("Rockwell Condensed", 0, 18)); // NOI18N
+        jLabel1.setText("Application for managing, monitoring, and controlling a hospital's system");
+
+        jLabel2.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout workAreaMainLayout = new javax.swing.GroupLayout(workAreaMain);
         workAreaMain.setLayout(workAreaMainLayout);
         workAreaMainLayout.setHorizontalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaMainLayout.createSequentialGroup()
+                .addContainerGap(118, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(79, 79, 79))
+            .addGroup(workAreaMainLayout.createSequentialGroup()
+                .addGap(256, 256, 256)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         workAreaMainLayout.setVerticalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 689, Short.MAX_VALUE)
+            .addGroup(workAreaMainLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel2)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addContainerGap(570, Short.MAX_VALUE))
         );
 
         splitPaneMain.setRightComponent(workAreaMain);
@@ -158,7 +182,7 @@ public class MainJFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(splitPaneMain)
+                .addComponent(splitPaneMain, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -230,6 +254,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnCustomer;
     private javax.swing.JButton btnSignUp;
     private javax.swing.JPanel controlPanelMain;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHospitalManagementSystem;
     private javax.swing.JSplitPane splitPaneMain;
     private javax.swing.JPanel workAreaMain;
